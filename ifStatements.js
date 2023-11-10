@@ -8,10 +8,21 @@
 // Write a conditional statement that prints only one or the other.
 // Experiment with manipulating the value held within numQuarters to make sure both conditions can be achieved.
 
-var numQuarters = 0;
+/*
+I also experimented by initializing the numGumballs variable which takes the number of quarters,
+divides it by 2, and rounds it down in case of odd numbers(using Math.floor() method). This
+was a good opportunity to practice some interpolation and give a more tailored output if the
+requirements are met.
+*/
+var numQuarters = 9;
+var numGumballs = Math.floor(numQuarters/2);
 
-console.log("I have enough money for a gumball");
-console.log("I don't have enough money for a gumball");
+if (numQuarters >= 2) {
+    console.log(`I have enough money for ${numGumballs} gumball(s).`);
+} else {
+    console.log("I don't have enough money for a gumball.");
+}
+
 
 
 // CHALLENGE 2
@@ -26,6 +37,19 @@ console.log("I don't have enough money for a gumball");
 
 // Experiment with manipulating the value held within both variables to make sure all above conditions output what you expect.
 
-var cupsOfFlour = 1;
+/* 
+I also experimented with a new variable numPizzas which takes the number of cupsOfFlour, 
+divides it by 2(per pizza) and rounds it down in case of odd numbers(using Math.floor() method). 
+This allows me to practice interpolation and give a more specific output of the number of pizzas
+we can make if the requirements are met.
+*/
+var cupsOfFlour = 10;
+var numPizzas = Math.floor(cupsOfFlour/2);
 var hasSauce = true;
+
+if (cupsOfFlour >= 2 && hasSauce) {
+    console.log(`I can make ${numPizzas} pizza(s).`);
+} else {
+    console.log("I cannot make a pizza.");
+}
 
